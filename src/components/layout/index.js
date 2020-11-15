@@ -1,16 +1,13 @@
 import React from "react";
-import Header from "components/shared/Header";
-import Footer from "components/shared/Footer";
-import Main from "components/shared/Main";
+import Header from "components/Header";
+import Footer from "components/Footer";
 
 import { Helmet } from "react-helmet-async";
 import PropTypes from "prop-types";
-import { GlobalStyle } from "components/styles";
 
 const Layout = ({ title, description, children }) => {
   return (
     <>
-      <GlobalStyle />
       <Helmet>
         <title>{title ? title : "React Shopping Cart"}</title>
         <meta
@@ -19,7 +16,7 @@ const Layout = ({ title, description, children }) => {
         />
       </Helmet>
       <Header />
-      <Main>{children}</Main>
+      <div className="main">{children}</div>
       <Footer />
     </>
   );
@@ -30,5 +27,5 @@ export default Layout;
 Layout.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
-  children: PropTypes.element,
+  children: PropTypes.node,
 };
