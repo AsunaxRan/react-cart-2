@@ -4,6 +4,7 @@ import { Container, Row, Col } from "styled-bootstrap-grid";
 import Checkbox from "components/Checkbox";
 import Image from "components/Image";
 import Product from "components/Product";
+import Radio from "components/Radio";
 
 const Styleguides = () => {
   const handleCheckboxChange = (e) => {
@@ -102,6 +103,15 @@ const Styleguides = () => {
                 slug: "sample-slug",
               }}
             />
+          </Col>
+        </Row>
+
+        <h3>Radio</h3>
+        <Row>
+          <Col>
+            <Radio />
+            <Radio name="sample-radio" />
+            <Radio name="sample-radio" checked={true} />
           </Col>
         </Row>
       </Container>
