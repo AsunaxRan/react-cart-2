@@ -64,7 +64,7 @@ const Product = (props) => {
   const { name, image, price, slug } = props.product;
 
   return (
-    <StyledProduct to={`/detail/${slug}`}>
+    <StyledProduct to={`/detail/${slug}`} title={name}>
       <RatioPlaceholder>
         <Thumbnail src={image} alt={name} />
       </RatioPlaceholder>
