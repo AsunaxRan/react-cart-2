@@ -41,11 +41,16 @@ const Styleguides = () => {
             <Product
               product={{
                 name: "Sample name",
-                price: 44.55,
+                price: {
+                  current: 223,
+                  promotion: 223,
+                  onSale: false,
+                },
                 image:
                   "https://cf.shopee.vn/file/f3b25cb457c3e335f955ecbd72fdee7c_tn",
-                slug: "sample-slug",
-                color: [],
+                url: "sample-slug",
+                color: ["black"],
+                brand: "Gucci",
               }}
             />
           </Col>
@@ -54,9 +59,15 @@ const Styleguides = () => {
               product={{
                 name:
                   "Sample name 2 long sample dsg sdgs gfd etre sdgsdg sdgdsg ewtwe wetv f",
-                price: 102.5,
+                price: {
+                  current: 100,
+                  promotion: 80,
+                  onSale: true,
+                },
                 image: "http://placeimg.com/640/480/fashion",
-                slug: "sample-slug",
+                url: "sample-slug",
+                color: ["red", "yellow", "blue"],
+                brand: "Aligator",
               }}
             />
           </Col>
@@ -65,9 +76,15 @@ const Styleguides = () => {
               product={{
                 name:
                   "Sample name 2 long sample dsg sdgs gfd etre sdgsdg sdgdsg ewtwe wetv f",
-                price: 102.5,
+                price: {
+                  current: 100,
+                  promotion: 100,
+                  onSale: false,
+                },
                 image: "http://placeimg.com/640/480/fashion",
-                slug: "sample-slug",
+                url: "sample-slug",
+                color: ["red", "yellow", "blue"],
+                brand: "Aligator",
               }}
             />
           </Col>
@@ -76,9 +93,15 @@ const Styleguides = () => {
               product={{
                 name:
                   "Sample name 2 long sample dsg sdgs gfd etre sdgsdg sdgdsg ewtwe wetv f",
-                price: 102.5,
+                price: {
+                  current: 100,
+                  promotion: 80,
+                  onSale: true,
+                },
                 image: "http://placeimg.com/640/480/fashion",
-                slug: "sample-slug",
+                url: "sample-slug",
+                color: ["red", "yellow", "blue"],
+                brand: "Aligator",
               }}
             />
           </Col>
@@ -87,9 +110,15 @@ const Styleguides = () => {
               product={{
                 name:
                   "Sample name 2 long sample dsg sdgs gfd etre sdgsdg sdgdsg ewtwe wetv f",
-                price: 102.5,
+                price: {
+                  current: 100,
+                  promotion: 80,
+                  onSale: true,
+                },
                 image: "http://placeimg.com/640/480/fashion",
-                slug: "sample-slug",
+                url: "sample-slug",
+                color: ["red", "yellow", "blue"],
+                brand: "Aligator",
               }}
             />
           </Col>
@@ -98,9 +127,15 @@ const Styleguides = () => {
               product={{
                 name:
                   "Sample name 2 long sample dsg sdgs gfd etre sdgsdg sdgdsg ewtwe wetv f",
-                price: 102.5,
+                price: {
+                  current: 100,
+                  promotion: 80,
+                  onSale: true,
+                },
                 image: "http://placeimg.com/640/480/fashion",
-                slug: "sample-slug",
+                url: "sample-slug",
+                color: ["brown"],
+                brand: "Aligator",
               }}
             />
           </Col>

@@ -3,7 +3,12 @@ import { ThemeProvider, createGlobalStyle } from "styled-components";
 import { Normalize } from "styled-normalize";
 import { BaseCSS } from "styled-bootstrap-grid";
 
-const theme = {};
+const theme = {
+  color: {
+    primary: "#19115C",
+    secondary: "#818181",
+  },
+};
 
 const GlobalStyle = createGlobalStyle`
   body {
