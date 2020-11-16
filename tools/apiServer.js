@@ -16,7 +16,6 @@ const server = jsonServer.create();
 const path = require("path");
 const router = jsonServer.router(path.join(__dirname, "db.json"));
 
-
 // To handle POST, PUT and PATCH you need to use a body-parser. Using JSON Server's bodyParser
 server.use(jsonServer.bodyParser);
 
@@ -29,7 +28,7 @@ server.use(function (req, res, next) {
 server.use(router);
 
 // Start server
-const port = 3001;
+const port = 3456;
 server.listen(port, () => {
   console.log(`JSON Server is running on port ${port}`);
 });

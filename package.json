@@ -28,8 +28,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "start:dev": "react-scripts start",
-    "start:api": "node tools/apiServer.js"
+    "client": "react-scripts start",
+    "server": "node tools/apiServer.js",
+    "dev": "npm-run-all --parallel server client"
   },
   "eslintConfig": {
     "extends": [
