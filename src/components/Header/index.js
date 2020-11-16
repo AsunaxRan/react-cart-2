@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Appbar from "components/Header/Appbar";
-import Container from "components/GridSystem/Container";
+import { Container } from "styled-bootstrap-grid";
 
 const StyledHeader = styled.header`
   background-color: #1976d2;
@@ -10,7 +10,7 @@ const StyledHeader = styled.header`
 const Header = () => {
   return (
     <StyledHeader>
-      <Container maxWidth="xl">
+      <Container>
         <Appbar />
       </Container>
     </StyledHeader>

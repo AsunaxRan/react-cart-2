@@ -3,6 +3,7 @@ import { MdShoppingCart } from "react-icons/md";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import { media } from "styled-bootstrap-grid";
 
 const CartIcon = styled.span`
   font-size: 24px;
@@ -41,7 +42,7 @@ const StyledCart = styled(Link)`
   padding: 8px 10px;
   border-radius: 4px;
 
-  @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+  ${media.md`
     border: 2px solid #fff;
 
     ${CartIcon} {
@@ -66,7 +67,7 @@ const StyledCart = styled(Link)`
       position: static;
       font-size: inherit;
     }
-  }
+  `}
 `;
 
 const Cart = ({ quantity }) => {

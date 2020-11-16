@@ -1,5 +1,5 @@
 import React from "react";
-import Container from "components/GridSystem/Container";
+import { Container } from "styled-bootstrap-grid";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
