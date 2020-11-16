@@ -3,6 +3,7 @@ import Layout from "components/Layout";
 import { Container, Row, Col } from "styled-bootstrap-grid";
 import Checkbox from "components/Checkbox";
 import Image from "components/Image";
+import Product from "components/Product";
 
 const Styleguides = () => {
   const handleCheckboxChange = (e) => {
@@ -29,6 +30,77 @@ const Styleguides = () => {
             <Image
               src="https://cf.shopee.vn/file/f3b25cb457c3e335f955ecbd72fdee7c_tn"
               alt="Shoppee"
+            />
+          </Col>
+        </Row>
+
+        <h3>Product</h3>
+        <Row>
+          <Col sm={4} lg={3}>
+            <Product
+              product={{
+                name: "Sample name",
+                price: 44.55,
+                image:
+                  "https://cf.shopee.vn/file/f3b25cb457c3e335f955ecbd72fdee7c_tn",
+                slug: "sample-slug",
+                color: [],
+              }}
+            />
+          </Col>
+          <Col sm={4} lg={3}>
+            <Product
+              product={{
+                name:
+                  "Sample name 2 long sample dsg sdgs gfd etre sdgsdg sdgdsg ewtwe wetv f",
+                price: 102.5,
+                image: "http://placeimg.com/640/480/fashion",
+                slug: "sample-slug",
+              }}
+            />
+          </Col>
+          <Col sm={4} lg={3}>
+            <Product
+              product={{
+                name:
+                  "Sample name 2 long sample dsg sdgs gfd etre sdgsdg sdgdsg ewtwe wetv f",
+                price: 102.5,
+                image: "http://placeimg.com/640/480/fashion",
+                slug: "sample-slug",
+              }}
+            />
+          </Col>
+          <Col sm={4} lg={3}>
+            <Product
+              product={{
+                name:
+                  "Sample name 2 long sample dsg sdgs gfd etre sdgsdg sdgdsg ewtwe wetv f",
+                price: 102.5,
+                image: "http://placeimg.com/640/480/fashion",
+                slug: "sample-slug",
+              }}
+            />
+          </Col>
+          <Col sm={4} lg={3}>
+            <Product
+              product={{
+                name:
+                  "Sample name 2 long sample dsg sdgs gfd etre sdgsdg sdgdsg ewtwe wetv f",
+                price: 102.5,
+                image: "http://placeimg.com/640/480/fashion",
+                slug: "sample-slug",
+              }}
+            />
+          </Col>
+          <Col sm={4} lg={3}>
+            <Product
+              product={{
+                name:
+                  "Sample name 2 long sample dsg sdgs gfd etre sdgsdg sdgdsg ewtwe wetv f",
+                price: 102.5,
+                image: "http://placeimg.com/640/480/fashion",
+                slug: "sample-slug",
+              }}
             />
           </Col>
         </Row>
