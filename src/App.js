@@ -1,12 +1,19 @@
-import Counter from './components/Counter';
-import SearchInput from './components/SearchInput';
-import Pagination from './components/Pagination/index';
+import React from "react";
+import Router from "routes";
+import { HelmetProvider } from "react-helmet-async";
+import GlobalThemeProvider from "theme/global";
+import CartProvider from "contexts/CartContext";
+
 function App() {
-  return <div className="App">
-    <Counter style={{ marginBottom: "10px" }} />
-    <SearchInput style={{ marginBottom: "10px" }} />
-    <Pagination />
-  </div>;
+  return (
+    <HelmetProvider>
+      <GlobalThemeProvider>
+        <CartProvider>
+          <Router />
+        </CartProvider>
+      </GlobalThemeProvider>
+    </HelmetProvider>
+  );
 }
 
 export default App;
