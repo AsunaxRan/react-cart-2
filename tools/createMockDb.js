@@ -48,8 +48,8 @@ function generateEmployees() {
       name: name,
       description: description,
       price: {
-        current: price,
-        promotion: promotionPrice,
+        current: promotionPrice,
+        old: price,
         onSale: onSale,
       },
       colors: colors,
