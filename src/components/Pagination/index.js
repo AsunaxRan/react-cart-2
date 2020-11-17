@@ -18,18 +18,25 @@ const PaginationItem = styled.li`
   transition: all .4s ease-out .2s;
   border: 1px solid #e5e5e5;
 
-  :hover{
+  &:hover{
     background: #19115C;
     border: 1px solid #19115C;
     color: #fff;
   }
 `;
 
+const DisableItem = styled.li`
+  cursor: not-allowed;
+  opacity: 0.6;
+  &::active{
+    pointer-events: none;
+  }
+`
+
 const SelectedItem = styled(PaginationItem)`
   background: #19115C;
   border: 1px solid #19115C;
   color: #fff;
-
 `;
 
 function Pagination() {
@@ -57,20 +64,23 @@ function Pagination() {
       >«</PaginationItem>
 
       <PaginationItem
-        onClick={() => { setCurrentPage(currentPage - 1) }}
+        onClick={() => { (currentPage > 1) ? setCurrentPage(currentPage - 1) : setCurrentPage(1) }}
       >‹</PaginationItem>
-      {!PageGroup.includes(1) ? <PaginationItem>...</PaginationItem> : ""}
 
-      {PageGroup.map(item => {
-        return (item === currentPage
-          ? <SelectedItem>{item}</SelectedItem>
-          : <PaginationItem
-            onClick={() => { setCurrentPage(item) }}
-          >{item}</PaginationItem>)
-      })}
-      {!PageGroup.includes(totalPage) ? <PaginationItem>...</PaginationItem> : ""}
+      { !PageGroup.includes(1) ? <PaginationItem>...</PaginationItem> : ""}
+
+      {
+        PageGroup.map(item => {
+          return (item === currentPage
+            ? <SelectedItem>{item}</SelectedItem>
+            : <PaginationItem
+              onClick={() => { setCurrentPage(item) }}
+            >{item}</PaginationItem>)
+        })
+      }
+      { !PageGroup.includes(totalPage) ? <PaginationItem>...</PaginationItem> : ""}
       <PaginationItem
-        onClick={() => { setCurrentPage(currentPage + 1) }}
+        onClick={currentPage < totalPage ? () => { setCurrentPage(currentPage + 1) } : ""}
       >›</PaginationItem>
 
       <PaginationItem
