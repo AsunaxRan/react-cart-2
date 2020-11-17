@@ -43,7 +43,7 @@ const Styleguides = () => {
                 name: "Sample name",
                 price: {
                   current: 223,
-                  promotion: 223,
+                  old: 223,
                   onSale: false,
                 },
                 image:
@@ -61,7 +61,7 @@ const Styleguides = () => {
                   "Sample name 2 long sample dsg sdgs gfd etre sdgsdg sdgdsg ewtwe wetv f",
                 price: {
                   current: 100,
-                  promotion: 80,
+                  old: 80,
                   onSale: true,
                 },
                 image: "http://placeimg.com/640/480/fashion",
@@ -78,7 +78,7 @@ const Styleguides = () => {
                   "Sample name 2 long sample dsg sdgs gfd etre sdgsdg sdgdsg ewtwe wetv f",
                 price: {
                   current: 100,
-                  promotion: 100,
+                  old: 100,
                   onSale: false,
                 },
                 image: "http://placeimg.com/640/480/fashion",
@@ -95,7 +95,7 @@ const Styleguides = () => {
                   "Sample name 2 long sample dsg sdgs gfd etre sdgsdg sdgdsg ewtwe wetv f",
                 price: {
                   current: 100,
-                  promotion: 80,
+                  old: 80,
                   onSale: true,
                 },
                 image: "http://placeimg.com/640/480/fashion",
@@ -112,7 +112,7 @@ const Styleguides = () => {
                   "Sample name 2 long sample dsg sdgs gfd etre sdgsdg sdgdsg ewtwe wetv f",
                 price: {
                   current: 100,
-                  promotion: 80,
+                  old: 80,
                   onSale: true,
                 },
                 image: "http://placeimg.com/640/480/fashion",
@@ -129,7 +129,7 @@ const Styleguides = () => {
                   "Sample name 2 long sample dsg sdgs gfd etre sdgsdg sdgdsg ewtwe wetv f",
                 price: {
                   current: 100,
-                  promotion: 80,
+                  old: 80,
                   onSale: true,
                 },
                 image: "http://placeimg.com/640/480/fashion",

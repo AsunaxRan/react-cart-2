@@ -100,7 +100,7 @@ const Product = (props) => {
       <Name>{name}</Name>
       <Price>
         <CurrentPrice>{"$" + price.current}</CurrentPrice>
-        {price.onSale && <OldPrice>{"$" + price.promotion}</OldPrice>}
+        {price.onSale && <OldPrice>{"$" + price.old}</OldPrice>}
         {price.onSale && <Promotion>Promotion</Promotion>}
       </Price>
     </StyledProduct>
@@ -114,7 +114,7 @@ Product.propTypes = {
   image: PropTypes.string.isRequired,
   price: PropTypes.shape({
     current: PropTypes.number.isRequired,
-    promotion: PropTypes.number.isRequired,
+    old: PropTypes.number.isRequired,
     onSale: PropTypes.bool.isRequired,
   }).isRequired,
   brand: PropTypes.string.isRequired,
