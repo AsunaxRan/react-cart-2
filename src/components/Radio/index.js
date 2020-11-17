@@ -13,21 +13,20 @@ const Checkmark = styled.span`
   vertical-align: middle;
   position: relative;
   z-index: 1;
-  color: rgb(120, 120, 120);
   border: 1px solid rgb(120, 120, 120);
   border-radius: 50%;
 
   &:before {
     content: "";
     position: absolute;
-    left: 4px;
-    top: 4px;
-    width: 8px;
-    height: 8px;
-    background-color: rgb(13, 92, 182);
+    left: 3px;
+    top: 3px;
+    width: 10px;
+    height: 10px;
+    background-color: ${({ theme, color }) =>
+      color ? color : theme.color.primary};
     transform: scale(0);
     border-radius: 50%;
-    transition: transform 0.3s ease;
   }
 `;
 
@@ -40,7 +39,8 @@ const Input = styled.input`
   opacity: 0;
 
   &:checked + ${Checkmark} {
-    border-color: rgb(13, 92, 182);
+    border-color: ${({ theme, color }) =>
+      color ? "rgb(120, 120, 120)" : theme.color.primary};
   }
 
   &:checked + ${Checkmark}:before {
@@ -48,11 +48,17 @@ const Input = styled.input`
   }
 `;
 
-const Radio = ({ name, value, checked }) => {
+const Radio = ({ name, value, checked, color }) => {
   return (
     <StyledRadio>
-      <Input type="radio" name={name} value={value} defaultChecked={checked} />
-      <Checkmark />
+      <Input
+        type="radio"
+        name={name}
+        value={value}
+        defaultChecked={checked}
+        color={color}
+      />
+      <Checkmark color={color} />
     </StyledRadio>
   );
 };
@@ -63,4 +69,5 @@ Radio.propTypes = {
   name: PropTypes.string.isRequired,
   value: PropTypes.any,
   checked: PropTypes.bool,
+  color: PropTypes.string,
 };

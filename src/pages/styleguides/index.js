@@ -144,9 +144,10 @@ const Styleguides = () => {
         <h3>Radio</h3>
         <Row>
           <Col>
-            <Radio />
             <Radio name="sample-radio" />
             <Radio name="sample-radio" checked={true} />
+            <Radio name="sample-radio-2" color="brown" />
+            <Radio name="sample-radio-2" checked={true} color="brown" />
           </Col>
         </Row>
       </Container>
